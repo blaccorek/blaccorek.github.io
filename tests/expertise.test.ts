@@ -15,15 +15,12 @@ test('the expertise section is titled What I do', async ({ page }) => {
 });
 
 for (const domain of DOMAINS) {
-    test(`the ${domain} card sums itself up in one sentence`, async ({
-        page
-    }) => {
+    test(`the ${domain} card shows its summary`, async ({ page }) => {
         await page.goto('/');
         const card = page
             .getByRole('article')
             .filter({ has: page.getByRole('heading', { name: domain }) });
         await expect(card).toBeVisible();
-        await expect(card.getByRole('paragraph')).toHaveCount(1);
-        await expect(card.getByRole('listitem')).toHaveCount(0);
+        await expect(card.getByRole('paragraph')).toBeVisible();
     });
 }

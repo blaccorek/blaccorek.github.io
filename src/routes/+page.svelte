@@ -1,9 +1,12 @@
 <script lang="ts">
+    import { resolve } from '$app/paths';
     import Heading from '$lib/atoms/heading/index.svelte';
     import Link from '$lib/atoms/link/index.svelte';
-    import Quote from '$lib/atoms/quote/index.svelte';
     import Text from '$lib/atoms/text/index.svelte';
     import Expertise from '$lib/resume/expertise/index.svelte';
+
+    const primaryButtonClasses =
+        'bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-400 inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-white shadow-sm transition-colors dark:text-gray-950';
 </script>
 
 <svelte:head>
@@ -31,47 +34,26 @@
 {/snippet}
 
 <div class="space-y-16 sm:space-y-20">
-    <section class="space-y-8">
-        <!-- The page is wide enough for the illustrated cards; the prose is
-             held back to a comfortable line length. -->
-        <div class="max-w-3xl space-y-6">
-            <p
-                class="text-2xl font-bold text-gray-900 sm:text-3xl dark:text-white"
-            >
-                Hello,
-            </p>
-            <Text size="xl">
-                I'm Tsiorintsoa Andriamihamina and I work as a DevOps consultant
-                for
-                <Link href="https://www.shodops.io/">Shodops</Link>. I help
-                engineering teams ship with confidence.
-            </Text>
-            <Text size="lg">
-                Since 2018 I've worked where development and operations meet —
-                in corporate and investment banking, then in energy-sector SaaS,
-                where “it works on my machine” isn't an option. I've operated
-                Kubernetes platforms on GitOps principles, built delivery
-                pipelines with a full test pyramid on ephemeral environments,
-                and shipped an internal API management platform that lets teams
-                create, document, test, and monitor their APIs themselves —
-                backend, portal, and pipeline. I've also kept a multi-tenant
-                SaaS platform healthy and affordable on AWS, with Terraform,
-                observability, and the on-call reality behind it.
-            </Text>
-            <Text size="lg">
-                That's my particularity: I don't only automate the delivery of
-                your product, I can build the product too. So I care about the
-                developer's experience as much as production reliability.
-            </Text>
+    <section class="max-w-3xl space-y-6">
+        <p
+            class="text-2xl leading-snug font-bold text-gray-900 sm:text-3xl dark:text-white"
+        >
+            I help engineering teams ship with confidence — and I can build the
+            product, not only the pipeline.
+        </p>
+        <Text size="lg">
+            I'm a DevOps consultant at
+            <Link href="https://www.shodops.io/">Shodops</Link>. Since 2018 I've
+            worked where development and operations meet, in corporate and
+            investment banking and then energy-sector SaaS, where “it works on
+            my machine” isn't an option.
+        </Text>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+            <Link href="#contact" variant="plain" class={primaryButtonClasses}>
+                Let's talk
+            </Link>
+            <Link href={resolve('/experience', {})}>See where I've worked</Link>
         </div>
-        <Quote>
-            <Text size="lg">
-                <b class="font-semibold text-gray-900 dark:text-white"
-                    >My mission:</b
-                >
-                empower teams to ship better software, faster, and with peace of mind.
-            </Text>
-        </Quote>
     </section>
 
     <section class="space-y-8">
@@ -128,7 +110,8 @@
     </section>
 
     <section
-        class="border-primary-200 bg-primary-50/70 dark:border-primary-800/60 dark:bg-primary-900/25 space-y-6 rounded-2xl border p-6 sm:p-10"
+        id="contact"
+        class="scroll-mt-24 border-primary-200 bg-primary-50/70 dark:border-primary-800/60 dark:bg-primary-900/25 space-y-6 rounded-2xl border p-6 sm:p-10"
     >
         {@render sectionTitle("Let's talk")}
         <Text size="lg" class="max-w-3xl">
@@ -138,7 +121,7 @@
         <Link
             href="mailto:tsiorintsoa.andriamihamina@shodops.io"
             variant="plain"
-            class="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-400 inline-flex items-center gap-2 rounded-full px-5 py-3 font-semibold text-white shadow-sm transition-colors dark:text-gray-950"
+            class={primaryButtonClasses}
         >
             tsiorintsoa.andriamihamina@shodops.io
         </Link>

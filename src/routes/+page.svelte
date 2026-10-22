@@ -1,6 +1,7 @@
 <script lang="ts">
     import { resolve } from '$app/paths';
     import Heading from '$lib/atoms/heading/index.svelte';
+    import Icon from '$lib/atoms/icon/index.svelte';
     import Link from '$lib/atoms/link/index.svelte';
     import Text from '$lib/atoms/text/index.svelte';
     import Expertise from '$lib/resume/expertise/index.svelte';
@@ -91,12 +92,18 @@
             If your teams are waiting on deployments, or your platform has grown
             faster than the standards around it, I'd be glad to hear about it.
         </Text>
-        <Link
-            href="mailto:tsiorintsoa.andriamihamina@shodops.io"
-            variant="plain"
-            class={primaryButtonClasses}
-        >
-            tsiorintsoa.andriamihamina@shodops.io
-        </Link>
+        <div class="flex flex-wrap items-center gap-x-6 gap-y-3">
+            <Link
+                href="https://www.linkedin.com/in/tsiorintsoa-a-0b3508390/"
+                variant="plain"
+                class={primaryButtonClasses}
+            >
+                <Icon name="linkedin" />
+                Connect on LinkedIn
+            </Link>
+            <Link href="mailto:tsiorintsoa.andriamihamina@shodops.io">
+                tsiorintsoa.andriamihamina@shodops.io
+            </Link>
+        </div>
     </section>
 </div>

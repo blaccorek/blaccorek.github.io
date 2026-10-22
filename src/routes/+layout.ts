@@ -6,7 +6,7 @@ export const load: LayoutLoad = ({ route }) => {
     return {
         currentPage: route.id,
         menuItems: [
-            { href: '/', title: 'About me' },
+            { href: '/', title: 'Home' },
             { href: '/experience', title: 'Work Experience' },
             { href: '/education', title: 'Education & Certifications' }
         ]

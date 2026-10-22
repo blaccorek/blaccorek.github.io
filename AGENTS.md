@@ -77,9 +77,8 @@ working around it.
   base path; use `resolve()` from `$app/paths` for static asset URLs.
 - **Accessibility is non-negotiable**. Every image needs a meaningful `alt` — or
   `alt=""` when it is decorative and the adjacent text already names it
-  (technology chips, expertise illustrations). External links need
-  `rel="noopener noreferrer"` (the `link` atom adds it). Use semantic headings
-  in order (`h1` → `h2` → `h3`).
+  (technology chips). External links need `rel="noopener noreferrer"` (the
+  `link` atom adds it). Use semantic headings in order (`h1` → `h2` → `h3`).
 
 ## 4. TDD workflow
 
@@ -102,6 +101,12 @@ What to unit-test in this repo: string / date formatters (`toCamelCase`,
 What to UI-test: page `<title>`, primary headings, links by role, and any
 visible behaviour a visitor relies on. Parameterise with a loop for table-driven
 cases (see [tests/navigation.test.ts](tests/navigation.test.ts)).
+
+Assert what the visitor sees, not what a change removed. A test that an old
+element is gone (`toHaveCount(0)`, `not.toBeVisible()`) only guards against a
+revert and says nothing about the page. Check for absence only when the page
+itself hides or removes something in response to the visitor — a closed menu, a
+dismissed banner — because then the disappearance is the behaviour.
 
 ## 5. Adding a new component
 

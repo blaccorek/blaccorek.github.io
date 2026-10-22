@@ -6,7 +6,7 @@ describe('ICONS', () => {
     const names = Object.keys(ICONS) as IconName[];
 
     it('registers every name the type allows', () => {
-        expect(names).toHaveLength(8);
+        expect(names).toHaveLength(9);
     });
 
     it.each(names)('%s resolves to a component', (name) => {

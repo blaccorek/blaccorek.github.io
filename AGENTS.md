@@ -102,6 +102,12 @@ What to UI-test: page `<title>`, primary headings, links by role, and any
 visible behaviour a visitor relies on. Parameterise with a loop for table-driven
 cases (see [tests/navigation.test.ts](tests/navigation.test.ts)).
 
+Assert what the visitor sees, not what a change removed. A test that an old
+element is gone (`toHaveCount(0)`, `not.toBeVisible()`) only guards against a
+revert and says nothing about the page. Check for absence only when the page
+itself hides or removes something in response to the visitor — a closed menu, a
+dismissed banner — because then the disappearance is the behaviour.
+
 ## 5. Adding a new component
 
 1. Decide its layer (atom / molecule / organism per

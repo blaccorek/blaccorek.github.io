@@ -4,6 +4,7 @@ import Check from '~icons/lucide/check';
 import Cloud from '~icons/lucide/cloud';
 import Code from '~icons/lucide/code';
 import GraduationCap from '~icons/lucide/graduation-cap';
+import Linkedin from '~icons/lucide/linkedin';
 import Rocket from '~icons/lucide/rocket';
 import ShieldCheck from '~icons/lucide/shield-check';
 
@@ -17,7 +18,8 @@ export type IconName =
     | 'cloud'
     | 'rocket'
     | 'code'
-    | 'shield';
+    | 'shield'
+    | 'linkedin';
 
 /* Lucide, via unplugin-icons: each import is inlined as an SVG component at
    build time. The names here stay ours, so swapping a glyph is a one-line
@@ -30,5 +32,6 @@ export const ICONS: Record<IconName, Component> = {
     cloud: Cloud,
     rocket: Rocket,
     code: Code,
-    shield: ShieldCheck
+    shield: ShieldCheck,
+    linkedin: Linkedin
 };

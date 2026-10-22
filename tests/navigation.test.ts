@@ -1,7 +1,7 @@
 import { expect, test } from '@playwright/test';
 
 for (const link of [
-    { name: 'About Me', url: '/' },
+    { name: 'Home', url: '/' },
     { name: 'Work Experience', url: '/experience' },
     { name: 'Education & Certifications', url: '/education' }
 ]) {

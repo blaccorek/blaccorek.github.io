@@ -77,9 +77,8 @@ working around it.
   base path; use `resolve()` from `$app/paths` for static asset URLs.
 - **Accessibility is non-negotiable**. Every image needs a meaningful `alt` — or
   `alt=""` when it is decorative and the adjacent text already names it
-  (technology chips, expertise illustrations). External links need
-  `rel="noopener noreferrer"` (the `link` atom adds it). Use semantic headings
-  in order (`h1` → `h2` → `h3`).
+  (technology chips). External links need `rel="noopener noreferrer"` (the
+  `link` atom adds it). Use semantic headings in order (`h1` → `h2` → `h3`).
 
 ## 4. TDD workflow
 

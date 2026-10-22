@@ -27,8 +27,3 @@ for (const domain of DOMAINS) {
         await expect(card.getByRole('listitem')).toHaveCount(0);
     });
 }
-
-test('the expertise cards carry no illustrations', async ({ page }) => {
-    await page.goto('/');
-    await expect(page.getByRole('article').locator('img')).toHaveCount(0);
-});

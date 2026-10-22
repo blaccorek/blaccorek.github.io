@@ -57,54 +57,27 @@
     </section>
 
     <section class="space-y-8">
-        {@render sectionTitle('My Domains of Expertise')}
-        <div class="space-y-6 sm:space-y-8">
+        {@render sectionTitle('What I do')}
+        <div class="grid gap-6 sm:grid-cols-2">
             <Expertise
-                title="Platform & Infrastructure Engineering"
+                title="Platform & Infrastructure"
                 icon="cloud"
-                image="/images/expertise/platform-engineering.png"
-                items={[
-                    'Designing and operating Kubernetes platforms driven by GitOps',
-                    'Managing infrastructure as code with Terraform, so every change is reviewed, versioned, and reproducible',
-                    'Running cloud migrations without freezing delivery, on-premise to AWS and GCP to AWS',
-                    'Holding reliability and security standards that stand up in regulated environments'
-                ]}
+                summary="Kubernetes platforms run on GitOps and infrastructure as code with Terraform, so every change is reviewed, versioned, and reproducible — including migrations to AWS."
             />
-            <!-- Flipped so the illustrations alternate down the stack. -->
             <Expertise
                 title="Delivery & Developer Experience"
                 icon="rocket"
-                image="/images/expertise/dev-experience.png"
-                flip
-                items={[
-                    'Cutting lead time from commit to production, with releases that stay predictable and boring',
-                    'Building a test strategy developers trust: a full pyramid running on ephemeral environments',
-                    'Applying Platform Engineering so teams serve themselves instead of waiting on ops',
-                    'Growing a DevOps culture that outlives the engagement'
-                ]}
+                summary="Short lead times and boring releases, backed by a test pyramid on ephemeral environments and a platform teams can serve themselves from."
             />
             <Expertise
                 title="Full-Stack Product Engineering"
                 icon="code"
-                image="/images/expertise/full-stack.png"
-                items={[
-                    'Building the product, not only the pipeline: Spring Boot back-ends and React front-ends',
-                    'Designing APIs and their contracts — OpenAPI, AsyncAPI, GraphQL, and Protobuf',
-                    'Shipping internal tools and developer portals that engineers actually want to use',
-                    'Working with product and design teams to deliver features, not tickets'
-                ]}
+                summary="The product, not only the pipeline: Spring Boot and React applications, well-designed API contracts, and internal tools engineers actually want to use."
             />
             <Expertise
                 title="Reliability, Observability & Cost"
                 icon="shield"
-                image="/images/expertise/cost-optimization.png"
-                flip
-                items={[
-                    'Setting up monitoring and alerting that catch problems before users report them',
-                    'Designing for high availability and disaster recovery, then proving it holds',
-                    'Building access control and security into the platform instead of bolting them on at review time',
-                    'Cutting cloud spend without trading away reliability'
-                ]}
+                summary="Monitoring that catches problems before users do, high availability you've actually tested, and a cloud bill that shrinks without trading away reliability."
             />
         </div>
     </section>
